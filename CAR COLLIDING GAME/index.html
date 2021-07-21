@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .car,
+        .enemy {
+            width: 50px;
+            height: 70px;
+            background-color: black;
+            border: 1px solid black;
+            position: absolute;
+            bottom: 120px;
+            background-image: url("car.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .enemy {
+            background-image: url("enemyImage.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .carGame {
+            width: 100%;
+            height: 100vh;
+            background-image: url(bg.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .gameArea {
+            width: 400px;
+            height: 100vh;
+            background-color: black;
+            border-left: 5px dashed white;
+            border-right: 5px dashed white;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lines {
+            width: 10px;
+            height: 108px;
+            background-color: white;
+            position: absolute;
+            margin-left: 195px;
+        }
+
+        .score {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            width: 300px;
+            height: 80px;
+            background-color: rgb(78, 197, 31);
+            border: 5px solid rgb(0, 0, 0);
+            color: black;
+            font-weight: bolder;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 30px;
+            text-decoration: underline;
+        }
+
+        .startScreen {
+            position: absolute;
+            background-color: gainsboro;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            z-index: 1;
+            text-align: center;
+            border: 8px solid saddlebrown;
+            border-radius: 10%;
+            padding: 50px;
+            margin: auto;
+            cursor: pointer;
+            letter-spacing: 5;
+            font-size: 30px;
+            word-spacing: 3;
+            line-height: 30px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px chartreuse;
+            box-shadow: 5px 5px rgb(204, 180, 83);
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carGame">
+        <div class="score hide"> </div>
+        <div class="startScreen">
+            <p> Press here to start <br>
+                Arrow keys to move <br>
+                If you hit another car you will loose.
+            </p>
+        </div>
+        <div class="gameArea"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
